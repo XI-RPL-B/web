@@ -1,25 +1,83 @@
 /* KAS */
 
-.total-card{ margin-bottom:12px;text-align:left; }
+.total-card{ margin-bottom:12px; }
 
 #totalKas{
     font-size:34px;font-weight:800;letter-spacing:-.035em;line-height:1.05;
     color:var(--hero-txt);font-variant-numeric:tabular-nums;
 }
 
+.rincian{
+    display:flex;gap:22px;margin-top:16px;
+    padding-top:14px;border-top:1px solid rgba(255,255,255,.22);
+}
+
+.rincian em{
+    display:block;font-style:normal;font-size:9.5px;font-weight:600;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--hero-txt-2);
+}
+
+.rincian b{
+    display:block;margin-top:2px;font-size:14px;font-weight:700;
+    color:var(--hero-txt);font-variant-numeric:tabular-nums;
+}
+
+/* Pemasukan / Pengeluaran */
+.pilih-tipe{
+    display:flex;gap:6px;padding:4px;margin-bottom:12px;
+    background:var(--sunken);border-radius:var(--r-pill);
+}
+
+.pilih-tipe button{
+    flex:1;padding:9px 10px;font-size:12.5px;font-weight:600;
+    border-radius:var(--r-pill);background:none;color:var(--txt-2);
+}
+
+.pilih-tipe button:hover{ filter:none;color:var(--txt); }
+
+.pilih-tipe button.aktif{
+    background:linear-gradient(140deg,var(--violet),var(--cyan));
+    color:#fff;
+}
+
+.pilih-tipe button[data-tipe="keluar"].aktif{
+    background:linear-gradient(140deg,var(--rose),var(--amber));
+}
+
 #formKas{ margin-bottom:12px; }
 #formKas input{ margin-bottom:10px; }
-#formKas button{ width:100%; }
+#formKas #tambahKas{ width:100%; }
 
+#formKas.mode-keluar #tambahKas{
+    background:linear-gradient(140deg,var(--rose),var(--amber));
+}
+
+/* Riwayat */
 .riwayat ul{ list-style:none; }
 
 .riwayat li{
-    display:flex;align-items:center;justify-content:space-between;gap:10px;
-    padding:12px 0;font-size:13px;border-bottom:1px solid var(--edge);
+    display:flex;align-items:center;gap:10px;
+    padding:12px 0;border-bottom:1px solid var(--edge);
 }
 
 .riwayat li:last-child{ border-bottom:0;padding-bottom:0; }
-.riwayat li small{ color:var(--txt-3); }
+.riwayat li:first-child{ padding-top:0; }
+
+.riwayat li strong{ display:block;font-size:13px;font-weight:600;line-height:1.3; }
+.riwayat li small{ display:block;font-size:10.5px;color:var(--txt-3);margin-top:1px; }
+
+.riwayat .nominal{
+    margin-left:auto;flex-shrink:0;white-space:nowrap;
+    font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;
+}
+
+.riwayat li.masuk .nominal{ color:var(--mint); }
+.riwayat li.keluar .nominal{ color:var(--rose); }
+
+.riwayat li.masuk{ border-left:3px solid var(--mint);padding-left:11px; }
+.riwayat li.keluar{ border-left:3px solid var(--rose);padding-left:11px; }
+
+.kosong-kecil{ font-size:12.5px;color:var(--txt-3); }
 
 @media (min-width:900px){
     #totalKas{ font-size:44px; }
