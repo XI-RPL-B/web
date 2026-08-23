@@ -203,13 +203,19 @@ window.addEventListener("DOMContentLoaded", function () {
 
         const daftar = Array.isArray(nilai) ? nilai : [];
 
+        // Pengeluaran mengurangi saldo
         const total = daftar.reduce(function (t, x) {
-            return t + (Number(x.jumlah) || 0);
+            const n = Number(x.jumlah) || 0;
+            return x.tipe === "keluar" ? t - n : t + n;
         }, 0);
 
         el("totalKasDashboard").textContent = "Rp " + total.toLocaleString("id-ID");
 
-        const pembayar = new Set(daftar.map(function (x) { return x.nama; })).size;
+        // Yang dihitung "sudah bayar" hanya pemasukan
+        const pembayar = new Set(
+            daftar.filter(function (x) { return x.tipe !== "keluar"; })
+                  .map(function (x) { return x.nama; })
+        ).size;
 
         el("subKas").textContent = daftar.length
             ? pembayar + " dari " + semuaSiswa.length + " siswa sudah bayar"
