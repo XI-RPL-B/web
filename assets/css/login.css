@@ -1,0 +1,56 @@
+/* HALAMAN MASUK */
+
+body{ display:grid;place-items:center;padding:62px 24px 24px; }
+
+.login-card{
+    width:min(100%,380px);
+    padding:34px 28px;
+    text-align:center;
+    background:var(--glass-2);
+    -webkit-backdrop-filter:var(--blur);
+    backdrop-filter:var(--blur);
+    border:1px solid var(--edge);
+    border-radius:var(--r-lg);
+    box-shadow:var(--shadow-lg);
+    animation:naik .5s cubic-bezier(.2,.9,.3,1) both;
+}
+
+@keyframes naik{ from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:none} }
+
+.login-card h1{
+    font-size:28px;
+    background:linear-gradient(100deg,var(--violet),var(--cyan));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+
+.login-card p{ color:var(--txt-2);font-size:13px;margin:6px 0 26px; }
+.login-card input{ margin-bottom:12px; }
+.login-card button{ width:100%;margin-top:6px; }
+
+@media (min-width:900px){ body{ padding:76px 24px 24px; } }
+
+/* Kolom password + tombol mata */
+.kolom-sandi{ position:relative;margin-bottom:12px; }
+
+.kolom-sandi input{ margin-bottom:0;padding-right:48px; }
+
+.kolom-sandi button{
+    position:absolute;top:50%;right:6px;
+    transform:translateY(-50%);
+    width:34px;height:34px;padding:0;
+    display:grid;place-items:center;
+    border-radius:var(--r-pill);
+    background:none;border:0;
+    color:var(--txt-2);
+    opacity:.55;
+    transition:opacity .18s ease,color .18s ease;
+}
+
+.kolom-sandi svg{ width:19px;height:19px;display:block; }
+
+/* Garis coret muncul saat password disembunyikan */
+.kolom-sandi .coret{ opacity:1;transition:opacity .18s ease; }
+.kolom-sandi button.aktif .coret{ opacity:0; }
+
+.kolom-sandi button:hover{ filter:none;opacity:.75; }
+.kolom-sandi button.aktif{ opacity:1;color:var(--violet); }

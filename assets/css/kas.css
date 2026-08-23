@@ -1,0 +1,27 @@
+/* KAS */
+
+.total-card{ margin-bottom:12px;text-align:left; }
+
+#totalKas{
+    font-size:34px;font-weight:800;letter-spacing:-.035em;line-height:1.05;
+    color:var(--hero-txt);font-variant-numeric:tabular-nums;
+}
+
+#formKas{ margin-bottom:12px; }
+#formKas input{ margin-bottom:10px; }
+#formKas button{ width:100%; }
+
+.riwayat ul{ list-style:none; }
+
+.riwayat li{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    padding:12px 0;font-size:13px;border-bottom:1px solid var(--edge);
+}
+
+.riwayat li:last-child{ border-bottom:0;padding-bottom:0; }
+.riwayat li small{ color:var(--txt-3); }
+
+@media (min-width:900px){
+    #totalKas{ font-size:44px; }
+    .kas-grid{ display:grid;grid-template-columns:1fr 1.4fr;gap:12px;align-items:start; }
+}

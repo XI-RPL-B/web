@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login XI RPL-B</title>
+
+    <meta name="theme-color" content="#EDEFF7">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+
+    <!-- dijalankan lebih dulu agar tidak berkedip putih -->
+    <script src="assets/js/theme.js"></script>
+
+</head>
+
+<body>
+
+    <div class="login-card">
+
+        <h1>XI RPL-B</h1>
+
+        <p>Solidddddddd</p>
+
+        <form id="loginForm">
+
+    <input type="text"
+           id="username"
+           placeholder="Username"
+           required>
+
+    <div class="kolom-sandi">
+
+        <input type="password"
+               id="password"
+               placeholder="Password"
+               required>
+
+        <button type="button" id="lihatSandi" aria-label="Tampilkan password">
+
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+                <line class="coret" x1="4" y1="20" x2="20" y2="4"></line>
+            </svg>
+
+        </button>
+
+    </div>
+
+    <button type="submit" id="loginBtn">
+        Login
+    </button>
+
+</form>
+
+    </div>
+
+    <!-- Sinkronisasi antar perangkat -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/users.js"></script>
+    <script src="assets/js/login.js"></script>
+
+</body>
+</html>

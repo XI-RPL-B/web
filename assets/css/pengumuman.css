@@ -1,0 +1,28 @@
+/* PENGUMUMAN */
+
+#formPengumuman{ margin-bottom:14px; }
+#formPengumuman input{ margin-bottom:10px; }
+#formPengumuman textarea{ margin-bottom:12px; }
+
+.form-aksi{ display:flex;gap:8px; }
+.form-aksi button{ flex:1; }
+
+.umum-card{ border-left:3px solid var(--violet); }
+
+.umum-atas{ display:flex;align-items:flex-start;justify-content:space-between;gap:10px; }
+.umum-atas h3{ font-size:15px;line-height:1.35;flex:1; }
+
+.umum-aksi{ display:flex;gap:6px;flex-shrink:0; }
+.umum-aksi button{ padding:6px 12px;font-size:11.5px;border-radius:var(--r-pill); }
+
+.umum-card p{ font-size:13px;color:var(--txt-2);margin-top:8px;line-height:1.6; }
+
+.umum-meta{
+    margin-top:12px;padding-top:10px;border-top:1px solid var(--edge);
+    font-size:10.5px;color:var(--txt-3);
+}
+
+@media (min-width:900px){
+    #formPengumuman{ max-width:640px; }
+    .umum-atas h3{ font-size:17px; }
+}

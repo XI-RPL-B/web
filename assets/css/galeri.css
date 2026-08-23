@@ -1,0 +1,97 @@
+/* GALERI */
+
+#formGaleri{ margin-bottom:14px; }
+#formGaleri input[type="text"]{ margin:12px 0 10px; }
+#formGaleri button#tambahFoto{ width:100%; }
+#formGaleri button#tambahFoto:disabled{ opacity:.45;cursor:not-allowed;filter:none; }
+
+/* Area pilih berkas */
+.area-pilih{
+    display:grid;place-items:center;gap:4px;
+    padding:26px 18px;cursor:pointer;text-align:center;
+    border:1.5px dashed var(--edge-2);
+    border-radius:var(--r-sm);
+    background:var(--sunken);
+    transition:border-color .18s ease,background .18s ease;
+}
+
+.area-pilih:hover,
+.area-pilih.aktif{ border-color:var(--violet);background:var(--violet-soft); }
+.area-pilih.memuat{ opacity:.6;pointer-events:none; }
+
+.area-pilih .ikon{ font-size:26px;line-height:1; }
+.area-pilih span{ font-size:13px;font-weight:600; }
+.area-pilih small{ font-size:10.5px;color:var(--txt-3); }
+
+/* Antrian sebelum disimpan */
+.antrian{ display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px; }
+
+.antri{ position:relative;border-radius:var(--r-sm);overflow:hidden;background:var(--sunken); }
+.antri img{ width:100%;aspect-ratio:1;object-fit:cover;display:block; }
+
+.antri small{
+    position:absolute;left:6px;bottom:6px;
+    padding:2px 6px;border-radius:var(--r-pill);
+    background:rgba(8,12,22,.72);color:#fff;font-size:9px;font-weight:600;
+}
+
+.antri .buangAntri{
+    position:absolute;top:5px;right:5px;
+    width:22px;height:22px;padding:0;line-height:1;
+    display:grid;place-items:center;font-size:14px;
+    border-radius:50%;background:rgba(8,12,22,.72);
+    color:#fff;border-color:rgba(255,255,255,.3);
+}
+
+.bantuan{
+    font-size:11px;color:var(--txt-3);line-height:1.5;
+    margin-top:12px;padding-top:10px;border-top:1px solid var(--edge);
+}
+
+/* Daftar foto */
+.galeri-grid{ display:grid;grid-template-columns:1fr 1fr;gap:10px; }
+.galeri-grid .kosong{ grid-column:1 / -1; }
+
+.foto-card{ padding:0;overflow:hidden;position:relative; }
+
+.foto-bingkai{
+    aspect-ratio:4 / 3;background:var(--sunken);
+    display:grid;place-items:center;overflow:hidden;
+}
+
+.foto-bingkai img{
+    width:100%;height:100%;object-fit:cover;display:block;
+    transition:transform .35s cubic-bezier(.2,.8,.3,1);
+}
+
+.foto-card:hover .foto-bingkai img{ transform:scale(1.05); }
+
+.foto-bingkai.gagal{ padding:16px; }
+.foto-bingkai.gagal span{ font-size:11px;color:var(--txt-3);text-align:center;line-height:1.5; }
+
+/* Kedip halus saat foto sedang diambil */
+.memuat-foto{
+    width:100%;height:100%;
+    background:linear-gradient(100deg,transparent 20%,var(--glass-2) 50%,transparent 80%);
+    background-size:220% 100%;
+    animation:kedip 1.3s linear infinite;
+}
+
+@keyframes kedip{ from{background-position:120% 0} to{background-position:-120% 0} }
+
+.foto-card figcaption{ padding:12px 14px; }
+.foto-card figcaption strong{ display:block;font-size:12.5px;font-weight:600;line-height:1.3; }
+.foto-card figcaption small{ display:block;font-size:10.5px;color:var(--txt-3);margin-top:2px; }
+
+.foto-card .hapusFoto{
+    position:absolute;top:10px;right:10px;
+    background:rgba(8,12,22,.72);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+    color:#fff;border-color:rgba(255,255,255,.28);
+}
+
+@media (min-width:900px){
+    #formGaleri{ max-width:640px; }
+    .antrian{ grid-template-columns:repeat(5,1fr); }
+    .galeri-grid{ grid-template-columns:repeat(4,1fr);gap:12px; }
+}

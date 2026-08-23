@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XI RPL-B</title>
+    <meta name="theme-color" content="#EDEFF7">
+    <link rel="stylesheet" href="assets/css/theme.css">
+
+    <!-- dijalankan lebih dulu agar tidak berkedip putih -->
+    <script src="assets/js/theme.js"></script>
+
+</head>
+<body>
+
+<p style="font:14px system-ui,sans-serif;text-align:center;margin-top:40px">
+    Memuat...
+</p>
+
+<script src="assets/js/auth.js"></script>
+<script>
+    // Sudah login -> langsung dashboard. Belum -> halaman login.
+    window.location.replace(Auth.user() ? "dashboard.html" : "login.html");
+</script>
+
+</body>
+</html>

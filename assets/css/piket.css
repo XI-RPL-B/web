@@ -1,0 +1,81 @@
+/* PIKET */
+
+.hero{ margin-bottom:12px; }
+.hero h2{ font-size:19px;line-height:1.3;margin:12px 0 5px; }
+.hero p{ font-size:12.5px; }
+.hero.santai .jam-sisa{ display:none; }
+
+.jam-sisa{ display:flex;align-items:center;gap:10px;margin-top:16px; }
+.jam-sisa .track{ flex:1;margin-top:0; }
+.jam-sisa span{ font-size:11px;font-weight:700;color:var(--hero-txt);font-variant-numeric:tabular-nums; }
+
+.hitung{
+    display:inline-block;margin-left:6px;padding:1px 8px;
+    border-radius:var(--r-pill);background:var(--violet-soft);
+    color:var(--violet);font-size:9px;letter-spacing:0;
+}
+
+.hari-container{
+    display:flex;gap:8px;overflow-x:auto;padding:0 18px 6px 0;
+    margin-bottom:12px;scrollbar-width:none;
+}
+
+.hari-container::-webkit-scrollbar{ display:none; }
+
+.hari-container button{
+    flex:0 0 auto;padding:9px 18px;font-size:12.5px;font-weight:600;
+    border-radius:var(--r-pill);background:var(--glass);
+    -webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);
+    border:1px solid var(--edge);color:var(--txt-2);
+}
+
+.hari-container button:hover{ filter:none;border-color:var(--violet);color:var(--violet); }
+
+.hari-container button.active{
+    background:linear-gradient(140deg,var(--violet),var(--cyan));
+    border-color:transparent;color:#fff;
+}
+
+/* Baris petugas */
+.petugas{
+    display:flex;align-items:center;gap:12px;
+    padding:11px 0;border-bottom:1px solid var(--edge);
+}
+
+.petugas:last-child{ border-bottom:0;padding-bottom:0; }
+.petugas:first-child{ padding-top:0; }
+
+.petugas .urut{
+    flex-shrink:0;width:24px;height:24px;
+    display:grid;place-items:center;
+    border-radius:50%;background:var(--sunken);
+    font-size:10.5px;font-weight:700;color:var(--txt-3);
+    font-variant-numeric:tabular-nums;
+}
+
+.petugas .nama{ font-size:12.5px;font-weight:600;line-height:1.3; }
+.petugas .ket{ font-size:10.5px;color:var(--txt-3);margin-top:1px; }
+
+.petugas .centang{
+    margin-left:auto;flex-shrink:0;
+    width:28px;height:28px;padding:0;
+    display:grid;place-items:center;font-size:14px;line-height:1;
+    border-radius:50%;
+    background:none;color:transparent;
+    border:1.5px solid var(--edge-2);
+}
+
+.petugas .centang:hover{ filter:none;border-color:var(--mint); }
+.petugas .centang:disabled{ opacity:.4;cursor:not-allowed; }
+
+.petugas.sudah .urut{ background:color-mix(in srgb,var(--mint) 18%,transparent);color:var(--mint); }
+.petugas.sudah .nama{ color:var(--txt-2); }
+
+.petugas.sudah .centang{
+    background:var(--mint);border-color:var(--mint);color:#fff;
+}
+
+@media (min-width:900px){
+    #daftarPiket{ display:grid;grid-template-columns:1fr 1fr;gap:0 28px; }
+    .petugas:nth-last-child(2){ border-bottom:0; }
+}

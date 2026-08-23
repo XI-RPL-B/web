@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#EDEFF7">
+    <title>Kas XI RPL-B</title>
+
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/kas.css">
+
+    <script src="assets/js/theme.js"></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="page-head">
+            <div>
+                <span class="lbl">XI RPL-B</span>
+                <h1>&#128176; <span>Kas Kelas</span></h1>
+            </div>
+            <a href="menu.html" class="pill">&larr; Menu</a>
+        </div>
+
+        <div class="total-card">
+            <span class="lbl">Total terkumpul</span>
+            <div id="totalKas">Rp 0</div>
+        </div>
+
+        <div class="kas-grid">
+
+            <div id="formKas">
+
+                <span class="lbl">Catat pembayaran</span>
+
+                <input type="text" id="namaSiswa" placeholder="Nama siswa">
+                <input type="number" id="jumlahKas" placeholder="Jumlah (Rp)" min="0">
+
+                <button id="tambahKas">Simpan</button>
+
+            </div>
+
+            <div class="riwayat">
+                <h2>Riwayat</h2>
+                <ul id="listKas"></ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <nav class="bottom-nav">
+
+        <div class="indicator"></div>
+
+        <a href="dashboard.html" class="nav-item"><i>&#9670;</i><span>Beranda</span></a>
+        <a href="jadwal.html" class="nav-item"><i>&#128197;</i><span>Jadwal</span></a>
+        <a href="kas.html" class="nav-item"><i>&#128176;</i><span>Kas</span></a>
+        <a href="absensi.html" class="nav-item"><i>&#128221;</i><span>Absensi</span></a>
+        <a href="menu.html" class="nav-item"><i>&#9776;</i><span>Menu</span></a>
+
+    </nav>
+
+    <!-- Sinkronisasi antar perangkat -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/users.js"></script>
+    <script src="assets/js/kas.js"></script>
+    <script src="assets/js/navbar.js"></script>
+
+</body>
+</html>

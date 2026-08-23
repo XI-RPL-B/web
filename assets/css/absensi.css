@@ -1,0 +1,21 @@
+/* ABSENSI */
+
+.rekap{ margin-bottom:12px; }
+
+.siswa{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:12px 14px;margin-bottom:8px;border-left:3px solid transparent;
+}
+
+.siswa span{ font-size:12.5px;font-weight:500;line-height:1.35; }
+.siswa select{ width:auto;min-width:104px;flex-shrink:0;padding:8px 30px 8px 12px;font-size:12.5px;font-weight:600; }
+
+.siswa[data-status="Hadir"]{ border-left-color:var(--mint); }
+.siswa[data-status="Izin"] { border-left-color:var(--amber); }
+.siswa[data-status="Sakit"]{ border-left-color:var(--cyan); }
+.siswa[data-status="Alpha"]{ border-left-color:var(--rose); }
+
+@media (min-width:900px){
+    #daftarSiswa{ display:grid;grid-template-columns:1fr 1fr;gap:9px; }
+    .siswa{ margin-bottom:0; }
+}

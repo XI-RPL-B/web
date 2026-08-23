@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#EDEFF7">
+    <title>Absensi XI RPL-B</title>
+
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/absensi.css">
+
+    <script src="assets/js/theme.js"></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="page-head">
+            <div>
+                <span class="lbl">XI RPL-B</span>
+                <h1>&#128221; <span>Absensi</span></h1>
+            </div>
+            <a href="menu.html" class="pill">&larr; Menu</a>
+        </div>
+
+        <div class="card rekap">
+
+            <span class="lbl">Absensi hari ini</span>
+
+            <div class="segbar">
+                <i id="segHadir" style="background:var(--mint);flex:36"></i>
+                <i id="segIzin"  style="background:var(--amber);flex:0"></i>
+                <i id="segSakit" style="background:var(--cyan);flex:0"></i>
+                <i id="segAlpha" style="background:var(--rose);flex:0"></i>
+            </div>
+
+            <div class="seg-legend">
+                <div><b id="hadirCount">0</b><em>Hadir</em></div>
+                <div><b id="izinCount">0</b><em>Izin</em></div>
+                <div><b id="sakitCount">0</b><em>Sakit</em></div>
+                <div><b id="alphaCount">0</b><em>Alpha</em></div>
+            </div>
+
+        </div>
+
+        <div id="daftarSiswa"></div>
+
+    </div>
+
+    <nav class="bottom-nav">
+
+        <div class="indicator"></div>
+
+        <a href="dashboard.html" class="nav-item"><i>&#9670;</i><span>Beranda</span></a>
+        <a href="jadwal.html" class="nav-item"><i>&#128197;</i><span>Jadwal</span></a>
+        <a href="kas.html" class="nav-item"><i>&#128176;</i><span>Kas</span></a>
+        <a href="absensi.html" class="nav-item"><i>&#128221;</i><span>Absensi</span></a>
+        <a href="menu.html" class="nav-item"><i>&#9776;</i><span>Menu</span></a>
+
+    </nav>
+
+    <!-- Sinkronisasi antar perangkat -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/users.js"></script>
+    <script src="assets/js/absensi.js"></script>
+    <script src="assets/js/navbar.js"></script>
+
+</body>
+</html>

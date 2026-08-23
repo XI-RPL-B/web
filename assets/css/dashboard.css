@@ -1,0 +1,46 @@
+/* BERANDA */
+
+.hero{ margin-bottom:12px; }
+.hero h2{ font-size:19px;line-height:1.3;margin:12px 0 5px; }
+.hero p{ font-size:12.5px; }
+
+.hero.santai h2{ font-size:17px; }
+.hero.santai .jam-sisa{ display:none; }
+
+.jam-sisa{ display:flex;align-items:center;gap:10px;margin-top:16px; }
+.jam-sisa .track{ flex:1;margin-top:0; }
+.jam-sisa span{ font-size:11px;font-weight:700;color:var(--hero-txt); }
+
+a.card{ display:block;transition:transform .18s cubic-bezier(.34,1.3,.5,1),border-color .18s ease; }
+a.card:hover{ transform:translateY(-3px);border-color:var(--violet); }
+
+.hitung{
+    display:inline-block;margin-left:6px;padding:1px 7px;
+    border-radius:var(--r-pill);background:var(--violet-soft);
+    color:var(--violet);font-size:9px;letter-spacing:0;
+}
+
+.tautan-semua{
+    display:inline-block;margin-top:12px;
+    font-size:11.5px;font-weight:600;color:var(--violet);
+}
+
+.kosong-kecil{ font-size:12.5px;color:var(--txt-3); }
+
+/* Kartu piket di beranda */
+.piket-baris strong{ display:block;font-size:13px;font-weight:600; }
+.piket-baris small{ display:block;font-size:11px;color:var(--txt-3);margin-top:2px; }
+
+.piket-progres{ display:flex;align-items:center;gap:10px;margin-top:12px; }
+
+.track.kecil{
+    flex:1;height:5px;margin-top:0;border-radius:var(--r-pill);
+    background:var(--sunken);overflow:hidden;
+}
+
+.track.kecil i{ display:block;height:100%;border-radius:var(--r-pill);background:var(--mint); }
+
+.piket-progres span{
+    font-size:10.5px;font-weight:700;color:var(--txt-2);
+    font-variant-numeric:tabular-nums;white-space:nowrap;
+}

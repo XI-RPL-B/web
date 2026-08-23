@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#EDEFF7">
+    <title>Beranda XI RPL-B</title>
+
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+
+    <script src="assets/js/theme.js"></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="page-head">
+            <div>
+                <span class="lbl" id="tanggalHariIni">Memuat...</span>
+                <h1>Halo, <span id="namaSiswa">&hellip;</span></h1>
+            </div>
+            <span class="role" id="roleSiswa">&hellip;</span>
+        </div>
+
+        <!-- Pelajaran yang sedang berjalan -->
+        <div class="hero" id="kartuSekarang">
+
+            <span class="lbl" id="labelSekarang">&#9673; Sedang berlangsung</span>
+
+            <h2 id="mapelSekarang">Memuat jadwal...</h2>
+            <p id="guruSekarang">&nbsp;</p>
+
+            <div class="jam-sisa">
+                <div class="track"><i id="progresPelajaran" style="width:0%"></i></div>
+                <span id="sisaMenit"></span>
+            </div>
+
+        </div>
+
+        <div class="grid-2">
+
+            <!-- Absensi -->
+            <div class="card full">
+
+                <span class="lbl">Absensi hari ini</span>
+
+                <div class="segbar">
+                    <i id="segHadir" style="background:var(--mint);flex:36"></i>
+                    <i id="segIzin"  style="background:var(--amber);flex:0"></i>
+                    <i id="segSakit" style="background:var(--cyan);flex:0"></i>
+                    <i id="segAlpha" style="background:var(--rose);flex:0"></i>
+                </div>
+
+                <div class="seg-legend">
+                    <div><b id="jumlahHadir">0</b><em>Hadir</em></div>
+                    <div><b id="jumlahIzin">0</b><em>Izin</em></div>
+                    <div><b id="jumlahSakit">0</b><em>Sakit</em></div>
+                    <div><b id="jumlahAlpha">0</b><em>Alpha</em></div>
+                </div>
+
+            </div>
+
+            <!-- Kas -->
+            <a href="kas.html" class="card">
+                <span class="lbl">Kas kelas</span>
+                <div class="big" id="totalKasDashboard">Rp 0</div>
+                <div class="sub" id="subKas">Belum ada pembayaran</div>
+            </a>
+
+            <!-- Siswa -->
+            <a href="siswa.html" class="card">
+                <span class="lbl">Anggota kelas</span>
+                <div class="big" id="jumlahSiswa">0</div>
+                <div class="sub"><span id="jumlahPengurus">0</span> di antaranya pengurus</div>
+            </a>
+
+            <!-- Piket hari ini -->
+            <a href="piket.html" class="card full">
+                <span class="lbl">Piket hari ini
+                    <span class="hitung" id="jumlahPiket">0</span>
+                </span>
+                <div id="piketRingkas"></div>
+            </a>
+
+            <!-- Sisa jadwal -->
+            <div class="card full">
+                <span class="lbl">Sisa hari ini</span>
+                <div id="sisaJadwal"></div>
+            </div>
+
+            <!-- Pengumuman -->
+            <div class="card full">
+                <span class="lbl">Pengumuman
+                    <span class="hitung" id="jumlahPengumuman">0</span>
+                </span>
+                <div id="umumRingkas"></div>
+                <a href="pengumuman.html" class="tautan-semua">Lihat semua &rarr;</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <nav class="bottom-nav">
+
+        <div class="indicator"></div>
+
+        <a href="dashboard.html" class="nav-item"><i>&#9670;</i><span>Beranda</span></a>
+        <a href="jadwal.html" class="nav-item"><i>&#128197;</i><span>Jadwal</span></a>
+        <a href="kas.html" class="nav-item"><i>&#128176;</i><span>Kas</span></a>
+        <a href="absensi.html" class="nav-item"><i>&#128221;</i><span>Absensi</span></a>
+        <a href="menu.html" class="nav-item"><i>&#9776;</i><span>Menu</span></a>
+
+    </nav>
+
+    <!-- Sinkronisasi antar perangkat -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/users.js"></script>
+    <script src="assets/js/data-jadwal.js"></script>
+    <script src="assets/js/data-piket.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/navbar.js"></script>
+
+</body>
+</html>
