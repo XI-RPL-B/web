@@ -9,13 +9,13 @@
 const piketRegu = {
 
     senin: [
-        "achmad",     // 1
+        "ardian",     // 1
         "andina",     // 4
         "anis",       // 5
         "aniva",      // 6
         "annisa",     // 7
         "bela",       // 8
-        "diniyyatul", // 9
+        "dini", // 9
         "enania",     // 10
         "finda"       // 11
     ],
@@ -33,7 +33,7 @@ const piketRegu = {
     ],
 
     rabu: [
-        "ahmad",      // 3
+        "fajar",      // 3
         "natasya",    // 20
         "novi",       // 21
         "rachel",     // 22
@@ -48,12 +48,12 @@ const piketRegu = {
         "thibyanul",  // 31
         "sinta",      // 28
         "dinda",      // 29
-        "thalita",    // 30
-        "titik",      // 32
-        "wafaul",     // 33
+        "abel",    // 30
+        "zulfa",      // 32
+        "wafa",     // 33
         "wafi",       // 34
         "wafrotul",   // 35
-        "wiqurrothul" // 36
+        "ayun" // 36
     ],
 
     // Jumat: seluruh kelas. Diisi otomatis dari users.js
