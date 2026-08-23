@@ -23,16 +23,28 @@
             <a href="menu.html" class="pill">&larr; Menu</a>
         </div>
 
-        <div class="total-card">
-            <span class="lbl">Total terkumpul</span>
+            <div class="total-card">
+
+            <span class="lbl">Saldo kas</span>
             <div id="totalKas">Rp 0</div>
+
+            <div class="rincian">
+                <div><em>Masuk</em><b id="totalMasuk">Rp 0</b></div>
+                <div><em>Keluar</em><b id="totalKeluar">Rp 0</b></div>
+            </div>
+
         </div>
 
         <div class="kas-grid">
 
             <div id="formKas">
 
-                <span class="lbl">Catat pembayaran</span>
+                <span class="lbl">Catat transaksi</span>
+
+                <div class="pilih-tipe" id="pilihTipe">
+                    <button type="button" class="aktif" data-tipe="masuk">Pemasukan</button>
+                    <button type="button" data-tipe="keluar">Pengeluaran</button>
+                </div>
 
                 <input type="text" id="namaSiswa" placeholder="Nama siswa">
                 <input type="number" id="jumlahKas" placeholder="Jumlah (Rp)" min="0">
@@ -42,13 +54,11 @@
             </div>
 
             <div class="riwayat">
-                <h2>Riwayat</h2>
+                <span class="lbl">Riwayat</span>
                 <ul id="listKas"></ul>
             </div>
 
         </div>
-
-    </div>
 
     <nav class="bottom-nav">
 
