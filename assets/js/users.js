@@ -1,7 +1,7 @@
 const users = {
 
-    achmad: {
-        password: "achmad01",
+    ardian: {
+        password: "ardian01",
         role: "siswa",
         nama: "ACHMAD ARDIAN RAHMAN SETIAWAN",
         absen: 1
@@ -15,8 +15,8 @@ const users = {
         absen: 2
     },
 
-    ahmad: {
-        password: "ahmad03",
+    fajar: {
+        password: "fajar03",
         role: "siswa",
         nama: "AHMAD SHODIQ FAJAR BUDIMAN",
         absen: 3
@@ -30,7 +30,7 @@ const users = {
     },
 
     anis: {
-        password: "anis05",
+        password: "salsa05",
         role: "siswa",
         nama: "ANIS SALSABILLA",
         absen: 5
@@ -43,8 +43,8 @@ const users = {
         absen: 6
     },
 
-    annisa: {
-        password: "annisa07",
+   ilmi: {
+        password: "ilmi07",
         role: "siswa",
         nama: "ANNISA ILMIA NUR FADHILAH",
         absen: 7
@@ -57,8 +57,8 @@ const users = {
         absen: 8
     },
 
-    diniyyatul: {
-        password: "diniyyatul09",
+    dini: {
+        password: "dini09",
         role: "sekretaris",
         jabatan: "Sekretaris 1",
         nama: "DINIYYATUL JAZILA ZAHRA",
@@ -207,8 +207,8 @@ const users = {
         absen: 29
     },
 
-    thalita: {
-        password: "thalita30",
+   abel: {
+        password: "abel30",
         role: "sekretaris",
         jabatan: "Sekretaris 2",
         nama: "THALITA ABBILIA UFAIRAH",
@@ -222,16 +222,16 @@ const users = {
         absen: 31
     },
 
-    titik: {
-        password: "titik32",
+    zulfa: {
+        password: "zulfa32",
         role: "ketua",
         jabatan: "Ketua Kelas",
         nama: "TITIK ZULFAH ZUMAROH",
         absen: 32
     },
 
-    wafaul: {
-        password: "wafaul33",
+    wafa: {
+        password: "wafa33",
         role: "siswa",
         nama: "WAFA'UL MAIMUNA",
         absen: 33
@@ -251,8 +251,8 @@ const users = {
         absen: 35
     },
 
-    wiqurrothul: {
-        password: "wiqurrothul36",
+    ayun: {
+        password: "ayun36",
         role: "siswa",
         nama: "WIQURROTHUL AYUN",
         absen: 36
