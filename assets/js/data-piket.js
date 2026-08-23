@@ -1,68 +1,38 @@
 // ======================
 // JADWAL PIKET XI RPL-B
 // ======================
-// Disimpan sebagai username (kunci di users.js), bukan nama
-// mentah — supaya kalau ada ejaan nama yang berbeda, daftarnya
-// tetap nyambung ke orang yang benar.
+// Regu disimpan sebagai NOMOR ABSEN, bukan username.
+//
+// Alasannya: username boleh diganti kapan saja, sedangkan
+// nomor absen tetap. Versi sebelumnya memakai username, dan
+// begitu ada username yang diubah, orangnya hilang dari daftar
+// piket tanpa pesan error apa pun.
 // ======================
 
 const piketRegu = {
 
-    senin: [
-        "ardian",     // 1
-        "andina",     // 4
-        "anis",       // 5
-        "aniva",      // 6
-        "annisa",     // 7
-        "bela",       // 8
-        "dini", // 9
-        "enania",     // 10
-        "finda"       // 11
-    ],
+    senin:  [1, 4, 5, 6, 7, 8, 9, 10, 11],
+    selasa: [2, 12, 13, 14, 15, 16, 17, 18, 19],
+    rabu:   [3, 20, 21, 22, 23, 24, 25, 26, 27],
+    kamis:  [31, 28, 29, 30, 32, 33, 34, 35, 36],
 
-    selasa: [
-        "adi",        // 2
-        "gea",        // 12
-        "gina",       // 13
-        "jessica",    // 14
-        "juwita",     // 15
-        "kamelia",    // 16
-        "larisa",     // 17
-        "laura",      // 18
-        "lusiana"     // 19
-    ],
-
-    rabu: [
-        "fajar",      // 3
-        "natasya",    // 20
-        "novi",       // 21
-        "rachel",     // 22
-        "rani",       // 23
-        "reggina",    // 24
-        "ria",        // 25
-        "rika",       // 26
-        "setia"       // 27
-    ],
-
-    kamis: [
-        "thibyanul",  // 31
-        "sinta",      // 28
-        "dinda",      // 29
-        "abel",    // 30
-        "zulfa",      // 32
-        "wafa",     // 33
-        "wafi",       // 34
-        "wafrotul",   // 35
-        "ayun" // 36
-    ],
-
-    // Jumat: seluruh kelas. Diisi otomatis dari users.js
-    // supaya tidak perlu diperbarui dua kali kalau ada
-    // siswa yang masuk atau pindah.
+    // Jumat: seluruh kelas, diisi otomatis dari users.js
     jumat: null
 };
 
 const piketHari = ["senin", "selasa", "rabu", "kamis", "jumat"];
+
+// Cari username berdasarkan nomor absen
+function cariAbsen(nomor) {
+
+    const kunci = Object.keys(users);
+
+    for (let i = 0; i < kunci.length; i++) {
+        if (users[kunci[i]].absen === nomor) return kunci[i];
+    }
+
+    return null;
+}
 
 // Ambil daftar username yang piket pada satu hari
 function ambilPiket(hari) {
@@ -73,5 +43,21 @@ function ambilPiket(hari) {
         });
     }
 
-    return piketRegu[hari] || [];
+    const nomor = piketRegu[hari] || [];
+    const hasil = [];
+
+    nomor.forEach(function (n) {
+
+        const u = cariAbsen(n);
+
+        if (u) {
+            hasil.push(u);
+        } else {
+            // Kalau sampai muncul, berarti nomor absennya tidak
+            // ada di users.js — bukan diam-diam hilang lagi.
+            console.warn("Piket " + hari + ": absen " + n + " tidak ditemukan di users.js");
+        }
+    });
+
+    return hasil;
 }
